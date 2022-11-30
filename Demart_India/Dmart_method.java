@@ -76,7 +76,7 @@ public class Dmart_method implements Dmart_interface{
             for (int i = 1; i<=n ; i++)
             {
                 Class.forName("com.mysql.cj.jdbc.Driver"); // register driver 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Yogesh@1996"); 
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Password"); 
                 PreparedStatement st=con.prepareStatement("insert into Dmart values(?,?,?,?,?)");
 //                Scanner sc = new Scanner(System.in);
                 
@@ -174,7 +174,7 @@ public class Dmart_method implements Dmart_interface{
         System.out.println("------- Your Order Details  -------");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // register driver 
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Yogesh@1996"); // establish connection with database
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Password"); // establish connection with database
             Statement st=con.createStatement();  // for Excecute qury 
             ResultSet rs=st.executeQuery("select*from Dmart");  
             System.out.println("Id  Product  Quantity  Price  Total");
@@ -191,7 +191,7 @@ public class Dmart_method implements Dmart_interface{
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // register driver 
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Yogesh@1996"); // establish connection with database
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Password"); // establish connection with database
             Statement st=con.createStatement();  // for Excecute qury 
             ResultSet rs=st.executeQuery("select*from Final_Total");  
             
@@ -234,7 +234,7 @@ public class Dmart_method implements Dmart_interface{
         // TODO Auto-generated method stub
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // register driver 
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Yogesh@1996"); // establish connection with database
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Password"); // establish connection with database
             PreparedStatement st=con.prepareStatement("update Dmart set Product_Name=?, Product_Quantity=?,Product_Price=?,Total_price=? where Product_Id=?"); 
             Scanner sc = new Scanner(System.in);
             
@@ -275,7 +275,7 @@ public class Dmart_method implements Dmart_interface{
         // TODO Auto-generated method stub
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // register driver 
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Yogesh@1996"); // establish connection with database
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Password"); // establish connection with database
             PreparedStatement st=con.prepareStatement("DELETE FROM Dmart WHERE Product_Id=?"); 
             Scanner sc = new Scanner(System.in);
             
